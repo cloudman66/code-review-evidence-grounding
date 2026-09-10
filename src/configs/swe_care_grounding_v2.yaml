@@ -1,0 +1,23 @@
+dataset:
+  train_path: data/processed/swe_care_grounding_v2/train.jsonl
+  dev_path: data/processed/swe_care_grounding_v2/dev.jsonl
+  test_path: data/processed/swe_care_grounding_v2/test.jsonl
+
+retrieval:
+  top_k: 3
+
+ranking:
+  line_overlap_weight: 3.0
+  lexical_overlap_weight: 1.0
+  inline_code_weight: 1.5
+  inline_path_weight: 0.75
+  inline_line_weight: 2.5
+  path_token_weight: 0.0
+  path_exact_weight: 0.0
+  word_tfidf_weight: 1.5
+  char_tfidf_weight: 1.0
+  quoted_span_weight: 3.0
+  quoted_line_weight: 2.0
+
+output:
+  dir: results_v2/baselines/swe_care_grounding_baseline

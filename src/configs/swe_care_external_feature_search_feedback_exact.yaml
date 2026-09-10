@@ -1,0 +1,19 @@
+semantic_char_file_score:
+  train_score_cache_path: data/cache/scores/swe_care_context_slices_semantic_char_file_mean_train_exact.json.gz
+  dev_score_cache_path: data/cache/scores/swe_care_context_slices_semantic_char_file_mean_dev_exact.json.gz
+  test_score_cache_path: data/cache/scores/swe_care_context_slices_semantic_char_file_mean_test_exact.json.gz
+
+fuzzy_comment_score:
+  train_score_cache_path: data/cache/scores/swe_care_fuzzy_comment_len2_train_exact.json.gz
+  dev_score_cache_path: data/cache/scores/swe_care_fuzzy_comment_len2_dev_exact.json.gz
+  test_score_cache_path: data/cache/scores/swe_care_fuzzy_comment_len2_test_exact.json.gz
+
+semantic_intent_score:
+  train_score_cache_path: data/cache/scores/swe_care_semantic_intent_expanded_train_exact.json.gz
+  dev_score_cache_path: data/cache/scores/swe_care_semantic_intent_expanded_dev_exact.json.gz
+  test_score_cache_path: data/cache/scores/swe_care_semantic_intent_expanded_test_exact.json.gz
+
+semantic_feedback_score:
+  train_score_cache_path: data/cache/scores/swe_care_semantic_feedback_top1_train_exact.json.gz
+  dev_score_cache_path: data/cache/scores/swe_care_semantic_feedback_top1_dev_exact.json.gz
+  test_score_cache_path: data/cache/scores/swe_care_semantic_feedback_top1_test_exact.json.gz

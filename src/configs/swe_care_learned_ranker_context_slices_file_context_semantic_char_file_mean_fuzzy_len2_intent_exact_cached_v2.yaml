@@ -1,0 +1,37 @@
+dataset:
+  train_path: data/processed/swe_care_grounding_v2/train.jsonl
+  dev_path: data/processed/swe_care_grounding_v2/dev.jsonl
+  test_path: data/processed/swe_care_grounding_v2/test.jsonl
+
+retrieval:
+  top_k: 3
+
+feature_row_cache:
+  train_path: data/cache_v2/feature_rows/swe_care_train.jsonl.gz
+  dev_path: data/cache_v2/feature_rows/swe_care_dev.jsonl.gz
+  test_path: data/cache_v2/feature_rows/swe_care_test.jsonl.gz
+
+external_features:
+  - name: semantic_char_file_score
+    train_score_cache_path: data/cache_v2/scores/swe_care_context_slices_semantic_char_file_mean_train_exact.json.gz
+    dev_score_cache_path: data/cache_v2/scores/swe_care_context_slices_semantic_char_file_mean_dev_exact.json.gz
+    test_score_cache_path: data/cache_v2/scores/swe_care_context_slices_semantic_char_file_mean_test_exact.json.gz
+  - name: fuzzy_comment_score
+    train_score_cache_path: data/cache_v2/scores/swe_care_fuzzy_comment_len2_train_exact.json.gz
+    dev_score_cache_path: data/cache_v2/scores/swe_care_fuzzy_comment_len2_dev_exact.json.gz
+    test_score_cache_path: data/cache_v2/scores/swe_care_fuzzy_comment_len2_test_exact.json.gz
+  - name: semantic_intent_score
+    train_score_cache_path: data/cache_v2/scores/swe_care_semantic_intent_expanded_train_exact.json.gz
+    dev_score_cache_path: data/cache_v2/scores/swe_care_semantic_intent_expanded_dev_exact.json.gz
+    test_score_cache_path: data/cache_v2/scores/swe_care_semantic_intent_expanded_test_exact.json.gz
+
+training:
+  feature_transform: raw_plus_relative_plus_context_slices_plus_file_context
+  candidate_c_values: [0.1, 0.25, 0.5, 1.0, 2.0]
+  max_iter: 1000
+  solver: liblinear
+  class_weight: balanced
+  random_state: 42
+
+output:
+  dir: results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_intent_exact_cached

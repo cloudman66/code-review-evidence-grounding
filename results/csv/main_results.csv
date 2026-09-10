@@ -1,0 +1,9 @@
+system,description,status,hit1,hit3,mrr
+Lexical baseline,deterministic lexical ranking,active,0.546644844517185,0.795417348608838,0.6873449840701338
+Char+file anchor,semantic character/file anchor,active,0.5793780687397708,0.8314238952536824,0.7148664605728252
+Canonical single learned ranker,fuzzy len-2 plus pseudo-relevance feedback learned ranker,active,0.6006546644844517,0.8420621931260229,0.7305747106925722
+Intent-aware learned ranker,intent-aware learned-ranker specialist,active,0.5957446808510638,0.8420621931260229,0.728965733210038
+Intent + feedback learned ranker,exploratory intent plus feedback ablation,exploratory,0.602291325695581,0.8355155482815058,0.7306772262115572
+Fine-tuned MiniLM bi-encoder,in-domain fine-tuned MiniLM bi-encoder,active,0.43453355155482815,0.693126022913257,0.5918103971734474
+Off-the-shelf BGE (normalized),off-the-shelf BGE retrieval with normalized query,active,0.40916530278232405,0.6775777414075287,0.5707474605690098
+Off-the-shelf BGE (expanded),off-the-shelf BGE retrieval with expanded query,active,0.4075286415711948,0.6612111292962357,0.5663309298585523

@@ -1,0 +1,8 @@
+display_name,variant_key,role,status,hit1,hit3,mrr
+Lexical,lexical,Lexical baseline,active,0.546644844517185,0.795417348608838,0.6873449840701338
+Char+file anchor,char_file_anchor,Char+file anchor,active,0.5793780687397708,0.8314238952536824,0.7148664605728252
+BGE (normalized),dense_bge_normalized,Off-the-shelf BGE (normalized),active,0.40916530278232405,0.6775777414075287,0.5707474605690098
+BGE (expanded),dense_bge_expanded,Off-the-shelf BGE (expanded),active,0.4075286415711948,0.6612111292962357,0.5663309298585523
+Fine-tuned MiniLM,finetuned_minilm,Fine-tuned MiniLM bi-encoder,active,0.43453355155482815,0.693126022913257,0.5918103971734474
+Single ranker,canonical_single,Canonical single learned ranker,active,0.6006546644844517,0.8420621931260229,0.7305747106925722
+Intent branch,intent,Intent-aware learned ranker,active,0.5957446808510638,0.8420621931260229,0.728965733210038

@@ -1,0 +1,5 @@
+stage,variant_key,role,status,hit1,hit3,mrr
+Lexical,lexical,Lexical baseline,active,0.546644844517185,0.795417348608838,0.6873449840701338
+Char+file anchor,char_file_anchor,Char+file anchor,active,0.5793780687397708,0.8314238952536824,0.7148664605728252
+Fuzzy len-2 (standalone),fuzzy_len2,Fuzzy comment score (minimum token length 2),active,0.5499181669394435,0.8134206219312602,0.6935046935694014
+Canonical single ranker,canonical_single,Canonical single learned ranker,active,0.6006546644844517,0.8420621931260229,0.7305747106925722

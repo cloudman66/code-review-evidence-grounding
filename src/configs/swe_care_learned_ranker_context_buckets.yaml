@@ -1,0 +1,18 @@
+dataset:
+  train_path: data/processed/swe_care_grounding/train.jsonl
+  dev_path: data/processed/swe_care_grounding/dev.jsonl
+  test_path: data/processed/swe_care_grounding/test.jsonl
+
+retrieval:
+  top_k: 3
+
+training:
+  feature_transform: raw_plus_relative_plus_context_buckets
+  candidate_c_values: [0.1, 0.25, 0.5, 1.0, 2.0]
+  max_iter: 1000
+  solver: liblinear
+  class_weight: balanced
+  random_state: 42
+
+output:
+  dir: results/swe_care_learned_ranker_context_buckets

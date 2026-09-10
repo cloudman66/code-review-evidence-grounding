@@ -1,0 +1,33 @@
+dataset:
+  train_path: data/processed/swe_care_grounding/train.jsonl
+  dev_path: data/processed/swe_care_grounding/dev.jsonl
+  test_path: data/processed/swe_care_grounding/test.jsonl
+
+retrieval:
+  top_k: 3
+
+feature_row_cache:
+  train_path: results/feature_cache/swe_care_train.jsonl.gz
+  dev_path: results/feature_cache/swe_care_dev.jsonl.gz
+  test_path: results/feature_cache/swe_care_test.jsonl.gz
+
+external_features:
+  - name: semantic_score
+    train_score_cache_path: results/cache/swe_care_semantic_train.json.gz
+    dev_score_cache_path: results/cache/swe_care_semantic_dev.json.gz
+    test_score_cache_path: results/cache/swe_care_semantic_test.json.gz
+  - name: semantic_expanded_score
+    train_score_cache_path: results/cache/swe_care_semantic_expanded_train.json.gz
+    dev_score_cache_path: results/cache/swe_care_semantic_expanded_dev.json.gz
+    test_score_cache_path: results/cache/swe_care_semantic_expanded_test.json.gz
+
+training:
+  feature_transform: raw_plus_relative_plus_context_slices_plus_file_context
+  candidate_c_values: [0.1, 0.25]
+  max_iter: 1000
+  solver: liblinear
+  class_weight: balanced
+  random_state: 42
+
+output:
+  dir: results/swe_care_learned_ranker_context_slices_file_context_semantic_plus_expanded_quick

@@ -1,0 +1,30 @@
+{
+  "title": "Code Review Evidence Grounding",
+  "version": "1.1.0",
+  "publication_date": "2026-09-10",
+  "upload_type": "software",
+  "description": "Code, experiment scripts, tests, environment files, aggregate result CSV files, and data-source instructions for reproducible experiments on repository-level code review evidence grounding.",
+  "creators": [
+    {
+      "name": "Yuan, Bowen",
+      "affiliation": "Software Development Center, Industrial and Commercial Bank of China"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "code review",
+    "evidence grounding",
+    "information retrieval",
+    "learned ranking",
+    "reproducibility"
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cloudman66/code-review-evidence-grounding",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ]
+}

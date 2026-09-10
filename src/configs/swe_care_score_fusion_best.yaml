@@ -1,0 +1,18 @@
+dataset:
+  train_path: data/processed/swe_care_grounding/train.jsonl
+  dev_path: data/processed/swe_care_grounding/dev.jsonl
+  test_path: data/processed/swe_care_grounding/test.jsonl
+
+retrieval:
+  top_k: 3
+
+fusion:
+  normalization: minmax
+  models:
+    - model_path: results/swe_care_learned_ranker_context_buckets/model.json
+      weight: 1.0
+    - model_path: results/swe_care_learned_ranker_file_context/model.json
+      weight: 0.9
+
+output:
+  dir: results/swe_care_score_fusion_best

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software artifact, please cite it using the metadata from this file."
+title: "Code Review Evidence Grounding"
+version: "1.1.0"
+date-released: "2026-09-10"
+type: software
+authors:
+  - family-names: "Yuan"
+    given-names: "Bowen"
+repository-code: "https://github.com/cloudman66/code-review-evidence-grounding"
+url: "https://github.com/cloudman66/code-review-evidence-grounding/releases/tag/v1.1.0"
+license: "MIT"
+keywords:
+  - code review
+  - evidence grounding
+  - information retrieval
+  - learned ranking
+  - reproducibility
+abstract: >-
+  Code, experiment scripts, tests, environment files, aggregate result CSV files,
+  and data-source instructions for reproducible experiments on repository-level
+  code review evidence grounding.

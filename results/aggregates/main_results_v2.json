@@ -1,0 +1,258 @@
+{
+  "schema_version": "swe_care_v2_summary_1",
+  "generated_at_local": "2026-09-07T09:21:06+08:00",
+  "namespace": "parser-fixed v2",
+  "dataset": {
+    "path": "data/processed/swe_care_grounding_v2/test.jsonl",
+    "sha256": "70395333892b3a2e9875116f87c07c55d5b4f124611a56d3fb6dbd2e9ab9c222",
+    "split_sizes": {
+      "train": 9623,
+      "dev": 1070,
+      "test": 1222
+    },
+    "group_counts": {
+      "train": 5196,
+      "dev": 596,
+      "test": 609
+    },
+    "split_group_overlap_counts": {
+      "train_vs_dev": 0,
+      "train_vs_test": 0,
+      "dev_vs_test": 0
+    },
+    "exact_comment_gold_duplicate_counts": {
+      "train_vs_dev": 0,
+      "train_vs_test": 0,
+      "dev_vs_test": 0
+    },
+    "context_text_overlap_counts": {
+      "train_vs_dev": 13,
+      "train_vs_test": 1,
+      "dev_vs_test": 1
+    }
+  },
+  "systems": [
+    {
+      "id": "lexical",
+      "label": "Lexical baseline",
+      "status": "active",
+      "source": {
+        "path": "results_v2/baselines/swe_care_grounding_baseline/metrics.json",
+        "sha256": "6025f06fa5be9a77629ad24ceccfe67d3f841182dd719f7a9f266cac0441eebf",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.546644844517185,
+        "hit@3": 0.795417348608838,
+        "mrr": 0.6873449840701338
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "train": 9623,
+        "dev": 1070,
+        "test": 1222
+      },
+      "note": "Parser-fixed v2 deterministic lexical ranking."
+    },
+    {
+      "id": "char_file_anchor",
+      "label": "Char+file anchor",
+      "status": "active",
+      "source": {
+        "path": "results_v2/evaluations/char_file_mean_test/metrics.json",
+        "sha256": "baac0576f2fc1bbf8564d628834578b11c2eebff2e1aa814c7aeaf7089107d05",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.5793780687397708,
+        "hit@3": 0.8314238952536824,
+        "mrr": 0.7148664605728252
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "samples": 1222
+      },
+      "note": "Semantic character/file anchor before the learned ranker."
+    },
+    {
+      "id": "canonical_single",
+      "label": "Canonical single learned ranker",
+      "status": "active",
+      "source": {
+        "path": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_feedback_exact_cached/metrics.json",
+        "sha256": "c5dc3b51faca6a855c192db5af0c098ac2bcc1b9304ce139fd4acc0af9292610",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.6006546644844517,
+        "hit@3": 0.8420621931260229,
+        "mrr": 0.7305747106925722
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "train": 9623,
+        "dev": 1070,
+        "test": 1222
+      },
+      "note": "v2 fuzzy len-2 plus pseudo-relevance feedback ranker."
+    },
+    {
+      "id": "intent",
+      "label": "Intent-aware learned ranker",
+      "status": "active",
+      "source": {
+        "path": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_intent_exact_cached/metrics.json",
+        "sha256": "c1d43407adf345af2d66ff053f9efebc754fedb9ce4f493e8d9cdfb5b69609bd",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.5957446808510638,
+        "hit@3": 0.8420621931260229,
+        "mrr": 0.728965733210038
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "train": 9623,
+        "dev": 1070,
+        "test": 1222
+      },
+      "note": "Reported as an independent specialist branch."
+    },
+    {
+      "id": "intent_feedback",
+      "label": "Intent + feedback learned ranker",
+      "status": "exploratory",
+      "source": {
+        "path": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_intent_feedback_exact_cached/metrics.json",
+        "sha256": "35cf7b3934ae5407bf56471b6623fddd70c7ff1ebb726ca556a666e6e87d48f9",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.602291325695581,
+        "hit@3": 0.8355155482815058,
+        "mrr": 0.7306772262115572
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "train": 9623,
+        "dev": 1070,
+        "test": 1222
+      },
+      "note": "Exploratory ablation; not renamed as the overall system."
+    },
+    {
+      "id": "finetuned_minilm",
+      "label": "Fine-tuned MiniLM bi-encoder",
+      "status": "active",
+      "source": {
+        "path": "results_v2/baselines/swe_care_biencoder_finetuned_minilm/metrics.json",
+        "sha256": "e64d13461325545299964a9592dea0260342aee0ec9e1486bc16712250f5fd40",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.43453355155482815,
+        "hit@3": 0.693126022913257,
+        "mrr": 0.5918103971734474
+      },
+      "complete_ranking": true,
+      "dataset_sizes": {
+        "train": 9623,
+        "dev": 1070,
+        "test": 1222,
+        "train_pairs": 9552
+      },
+      "note": "In-domain fine-tuned dense baseline."
+    },
+    {
+      "id": "dense_bge_normalized",
+      "label": "Off-the-shelf BGE (normalized)",
+      "status": "active",
+      "source": {
+        "path": "data/cache_v2/scores/dense_bge_normalized_test.json.gz",
+        "sha256": "6080e4449ea8ae77a98d003034a077e92274fff10e98dd3d68883422d936a92b",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.40916530278232405,
+        "hit@3": 0.6775777414075287,
+        "mrr": 0.5707474605690098
+      },
+      "complete_ranking": true,
+      "cache_validation": {
+        "source": {
+          "path": "data/cache_v2/scores/dense_bge_normalized_test.json.gz",
+          "sha256": "6080e4449ea8ae77a98d003034a077e92274fff10e98dd3d68883422d936a92b",
+          "exists": true
+        },
+        "complete_ranking": true,
+        "status": "active",
+        "alignment_checks": {
+          "sample_ids": true,
+          "context_ids_by_group": true,
+          "gold_context_ids_by_group": true,
+          "group_sizes": true,
+          "score_length": true
+        },
+        "samples": 1222,
+        "total_contexts": 32068,
+        "model_path": "dense::BAAI/bge-small-en-v1.5::query_mode=normalized::context_mode=full::query_prefix=<none>::context_prefix=<none>"
+      },
+      "note": "Off-the-shelf dense baseline; included only after its v2 cache passes alignment checks."
+    },
+    {
+      "id": "dense_bge_expanded",
+      "label": "Off-the-shelf BGE (expanded)",
+      "status": "active",
+      "source": {
+        "path": "data/cache_v2/scores/dense_bge_expanded_test.json.gz",
+        "sha256": "60d8542c646c717df44c34e71ecda6ec2ede76ef6c43c2ac0739229268307b4d",
+        "exists": true
+      },
+      "metrics": {
+        "hit@1": 0.4075286415711948,
+        "hit@3": 0.6612111292962357,
+        "mrr": 0.5663309298585523
+      },
+      "complete_ranking": true,
+      "cache_validation": {
+        "source": {
+          "path": "data/cache_v2/scores/dense_bge_expanded_test.json.gz",
+          "sha256": "60d8542c646c717df44c34e71ecda6ec2ede76ef6c43c2ac0739229268307b4d",
+          "exists": true
+        },
+        "complete_ranking": true,
+        "status": "active",
+        "alignment_checks": {
+          "sample_ids": true,
+          "context_ids_by_group": true,
+          "gold_context_ids_by_group": true,
+          "group_sizes": true,
+          "score_length": true
+        },
+        "samples": 1222,
+        "total_contexts": 32068,
+        "model_path": "dense::BAAI/bge-small-en-v1.5::query_mode=expanded::context_mode=full::query_prefix=<none>::context_prefix=<none>"
+      },
+      "note": "Off-the-shelf dense baseline; included only after its v2 cache passes alignment checks."
+    }
+  ],
+  "deferred_systems": [],
+  "excluded_from_main": [
+    {
+      "id": "router",
+      "source": "results_v2/ablations/swe_care_multimodel_router_v2_raw",
+      "reason": "Exploratory router output; no v2 overall gain is claimed."
+    },
+    {
+      "id": "selective_hybrid",
+      "source": "results_v2/ablations/swe_care_selective_topk_hybrid_v2_intent",
+      "reason": "Exploratory context-policy output; not a canonical overall system."
+    }
+  ],
+  "invariants": {
+    "mrr": "Mean reciprocal rank of the first gold context in the complete candidate ranking.",
+    "hit_at_3": "Hit@3 uses only the top-three prefix.",
+    "prediction_files": "Prediction files retain top-3 prefixes; complete rankings come from aligned score caches or deterministic reconstruction.",
+    "legacy_results_namespace_used": false
+  }
+}

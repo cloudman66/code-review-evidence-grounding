@@ -1,0 +1,6 @@
+change,delta_hit1,delta_hit3,delta_mrr
+Canonical single learned ranker vs lexical,+0.0540,+0.0466,+0.0432
+Semantic Char+file anchor vs lexical,+0.0327,+0.0360,+0.0275
+Canonical single learned ranker vs Char+file anchor,+0.0213,+0.0106,+0.0157
+Intent-aware learned ranker vs canonical,-0.0049,+0.0000,-0.0016
+Intent + feedback (exploratory) vs canonical,+0.0016,-0.0065,+0.0001

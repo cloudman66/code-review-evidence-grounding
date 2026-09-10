@@ -1,0 +1,19 @@
+feature_family,display_name,importance
+Quoted-span exact matches,Quoted-span exact matches,2.0997094282599473
+Fuzzy comment score,Fuzzy comment score,1.946207714365464
+Semantic char+file,Semantic char+file,1.9354905838518703
+Added-token overlap,Added-token overlap,1.5286972616544365
+Feedback score,Feedback score,1.1804612107681476
+Changed-token overlap,Changed-token overlap,1.0889878281156617
+Lexical overlap,Lexical overlap,1.0255887646971165
+Inline matching,Inline matching,0.9747410436223748
+Word TF-IDF,Word TF-IDF,0.6288100035748311
+BM25,BM25,0.4361454295245204
+Line overlap,Line overlap,0.41655913495261643
+Removed-line overlap,Removed-line overlap,0.40792385938762477
+Added-line overlap,Added-line overlap,0.40305869744981015
+Char TF-IDF,Char TF-IDF,0.2628898937708484
+Path matching,Path matching,0.26201083252680885
+removed_token_overlap,removed_token_overlap,0.23597936138558365
+Replacement matching,Replacement matching,0.1833607839602882
+removed_token_overlap_within_file,removed_token_overlap_within_file,0.0007846404403778495

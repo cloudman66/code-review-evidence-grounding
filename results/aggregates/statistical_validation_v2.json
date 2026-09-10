@@ -1,0 +1,162 @@
+{
+  "dataset": "data/processed/swe_care_grounding_v2/test.jsonl",
+  "lexical_config": "src/configs/swe_care_grounding_v2.yaml",
+  "lexical_predictions": "results_v2/baselines/swe_care_grounding_baseline/predictions_test.jsonl",
+  "canonical_predictions": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_feedback_exact_cached/predictions_test.jsonl",
+  "canonical_score_cache": "data/cache_v2/scores/swe_care_canonical_ranker_test_exact.json.gz",
+  "prediction_file_validation": {
+    "lexical": {
+      "path": "results_v2/baselines/swe_care_grounding_baseline/predictions_test.jsonl",
+      "rows": 1222,
+      "validated": true
+    },
+    "canonical": {
+      "path": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_feedback_exact_cached/predictions_test.jsonl",
+      "rows": 1222,
+      "validated": true
+    }
+  },
+  "complete_ranking_validation": {
+    "lexical": {
+      "rows": 1222,
+      "complete_rankings": true,
+      "candidate_count": {
+        "min": 2,
+        "median": 9.0,
+        "max": 660,
+        "total": 32068
+      }
+    },
+    "canonical": {
+      "rows": 1222,
+      "complete_rankings": true,
+      "candidate_count": {
+        "min": 2,
+        "median": 9.0,
+        "max": 660,
+        "total": 32068
+      }
+    },
+    "canonical_score_cache": {
+      "sample_ids": true,
+      "context_ids_by_group": true,
+      "gold_context_ids_by_group": true,
+      "group_sizes": true,
+      "score_length": true,
+      "finite_scores": true,
+      "nonempty_groups": true
+    }
+  },
+  "bootstrap_samples": 4000,
+  "randomization_samples": 12000,
+  "seed": 42,
+  "cluster_unit": "metadata.group_key (PR-level)",
+  "estimand": "comment-level (micro) mean; PRs are the cluster/resampling unit",
+  "bootstrap_estimator": "sum(metric over resampled PR comments) / count(resampled PR comments)",
+  "sign_flip_test": "two-sided PR-level sign flip of each group's summed paired delta",
+  "mrr_definition": "standard reciprocal rank computed from the complete candidate ranking; top-3 is used only for Hit@3",
+  "groups": 609,
+  "samples": 1222,
+  "ranking_diagnostics": {
+    "lexical": {
+      "mrr_definition": "mean reciprocal rank of the first gold context in the complete candidate ranking",
+      "truncated_mrr_at_3_definition": "diagnostic only: reciprocal rank is set to zero when the first gold context is below rank 3",
+      "candidate_count": {
+        "min": 2,
+        "median": 9.0,
+        "max": 660,
+        "total": 32068
+      },
+      "samples_with_first_relevant_rank_gt_3": 250,
+      "samples_without_relevant_candidate": 0,
+      "full_mrr": 0.6873449840701327,
+      "truncated_mrr_at_3": 0.6575286415711947,
+      "full_minus_truncated": 0.029816342498937942
+    },
+    "canonical": {
+      "mrr_definition": "mean reciprocal rank of the first gold context in the complete candidate ranking",
+      "truncated_mrr_at_3_definition": "diagnostic only: reciprocal rank is set to zero when the first gold context is below rank 3",
+      "candidate_count": {
+        "min": 2,
+        "median": 9.0,
+        "max": 660,
+        "total": 32068
+      },
+      "samples_with_first_relevant_rank_gt_3": 193,
+      "samples_without_relevant_candidate": 0,
+      "full_mrr": 0.7305747106925706,
+      "truncated_mrr_at_3": 0.7082651391162029,
+      "full_minus_truncated": 0.022309571576367704
+    },
+    "note": "The reported MRR and its cluster confidence interval use the complete ranking. truncated_mrr_at_3 is a separate diagnostic and is not substituted for MRR."
+  },
+  "systems": {
+    "lexical": {
+      "groups": 609,
+      "samples": 1222,
+      "metrics": {
+        "hit@1": {
+          "mean": 0.546644844517185,
+          "ci_low": 0.5129054861689333,
+          "ci_high": 0.5799833190761335
+        },
+        "hit@3": {
+          "mean": 0.795417348608838,
+          "ci_low": 0.7667487053619593,
+          "ci_high": 0.8235318245427785
+        },
+        "mrr": {
+          "mean": 0.6873449840701327,
+          "ci_low": 0.6608641780479001,
+          "ci_high": 0.7134388298106651
+        }
+      }
+    },
+    "canonical": {
+      "groups": 609,
+      "samples": 1222,
+      "metrics": {
+        "hit@1": {
+          "mean": 0.6006546644844517,
+          "ci_low": 0.5665248558972409,
+          "ci_high": 0.6339849903834073
+        },
+        "hit@3": {
+          "mean": 0.8420621931260229,
+          "ci_low": 0.8149593648159018,
+          "ci_high": 0.8685848835586394
+        },
+        "mrr": {
+          "mean": 0.7305747106925707,
+          "ci_low": 0.7043924194891217,
+          "ci_high": 0.7557234497375237
+        }
+      }
+    }
+  },
+  "comparison": {
+    "left": "canonical",
+    "right": "lexical",
+    "groups": 609,
+    "metrics": {
+      "hit@1": {
+        "delta": 0.054009819967266774,
+        "ci_low": 0.031992510120033735,
+        "ci_high": 0.07679893858369795,
+        "p_value": 8.332638946754438e-05
+      },
+      "hit@3": {
+        "delta": 0.046644844517184945,
+        "ci_low": 0.02994434716990031,
+        "ci_high": 0.06509840174011727,
+        "p_value": 8.332638946754438e-05
+      },
+      "mrr": {
+        "delta": 0.04322972662243798,
+        "ci_low": 0.028986088483360324,
+        "ci_high": 0.05685582821738336,
+        "p_value": 8.332638946754438e-05
+      }
+    }
+  }
+}

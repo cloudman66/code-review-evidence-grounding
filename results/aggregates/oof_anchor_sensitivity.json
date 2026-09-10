@@ -1,0 +1,74 @@
+{
+  "schema_version": "strict_holdout_oof_anchor_sensitivity_1",
+  "description": "Aggregate sensitivity results for strict domain and repository holdouts. This file deliberately excludes sample-level predictions and fold provenance.",
+  "protocol": {
+    "outer_evaluation": "strict holdout by problem domain or repository",
+    "anchor_training_features": "five-fold group-aware out-of-fold anchor scores on each outer-training split",
+    "anchor_hyperparameter_selection": "outer development split",
+    "semantic_features": "fitted on the outer-training split; not inner cross-fitted"
+  },
+  "evaluations": [
+    {
+      "mode": "domain",
+      "completed_targets": 6,
+      "held_out_test_samples": 1089,
+      "macro": {
+        "lexical_hit@1": 0.5210697884943732,
+        "lexical_hit@3": 0.7750926904271392,
+        "lexical_mrr": 0.6717206014123334,
+        "holdout_hit@1": 0.5858810146273004,
+        "holdout_hit@3": 0.8363884949498934,
+        "holdout_mrr": 0.7219409479620986,
+        "anchor_hit@1": 0.5615505870635747,
+        "anchor_hit@3": 0.8105993783320259,
+        "anchor_mrr": 0.7008344730732389
+      },
+      "weighted": {
+        "lexical_hit@1": 0.5436179981634527,
+        "lexical_hit@3": 0.7961432506887053,
+        "lexical_mrr": 0.686093385755804,
+        "holdout_hit@1": 0.5968778696051423,
+        "holdout_hit@3": 0.8383838383838383,
+        "holdout_mrr": 0.7301508770818463,
+        "anchor_hit@1": 0.5711662075298439,
+        "anchor_hit@3": 0.8273645546372819,
+        "anchor_mrr": 0.711048112021783
+      },
+      "source": {
+        "relative_path": "results_v2/holdout_validation_strict_oof/domain/summary.json",
+        "sha256": "21bb3c490bce32e991bae34c63b39f51ee1df49df2055fc4ff8c0cfa27aa8e4f"
+      }
+    },
+    {
+      "mode": "repo",
+      "completed_targets": 6,
+      "held_out_test_samples": 386,
+      "macro": {
+        "lexical_hit@1": 0.5513113561076669,
+        "lexical_hit@3": 0.8196870015682198,
+        "lexical_mrr": 0.6970045579966527,
+        "holdout_hit@1": 0.6040897982020929,
+        "holdout_hit@3": 0.8426643001946058,
+        "holdout_mrr": 0.7338670511684117,
+        "anchor_hit@1": 0.60782687827952,
+        "anchor_hit@3": 0.8479096610995714,
+        "anchor_mrr": 0.7378245027733742
+      },
+      "weighted": {
+        "lexical_hit@1": 0.538860103626943,
+        "lexical_hit@3": 0.810880829015544,
+        "lexical_mrr": 0.6859809031503774,
+        "holdout_hit@1": 0.5906735751295337,
+        "holdout_hit@3": 0.8341968911917098,
+        "holdout_mrr": 0.7225163981733871,
+        "anchor_hit@1": 0.5932642487046632,
+        "anchor_hit@3": 0.844559585492228,
+        "anchor_mrr": 0.7273525874506632
+      },
+      "source": {
+        "relative_path": "results_v2/holdout_validation_strict_oof/repo/summary.json",
+        "sha256": "ff694ab33ab746f0fd762f13b21c2fa9635828acb78349b1112ffe62a38e8963"
+      }
+    }
+  ]
+}

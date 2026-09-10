@@ -1,0 +1,20 @@
+dataset:
+  train_path: data/processed/train.jsonl
+  dev_path: data/processed/dev.jsonl
+  test_path: data/processed/test.jsonl
+
+retrieval:
+  top_k: 2
+  seed: 42
+
+classification:
+  modes:
+    - none
+    - full
+    - random
+    - retrieved
+  max_features: 5000
+  random_state: 42
+
+output:
+  dir: results/baseline

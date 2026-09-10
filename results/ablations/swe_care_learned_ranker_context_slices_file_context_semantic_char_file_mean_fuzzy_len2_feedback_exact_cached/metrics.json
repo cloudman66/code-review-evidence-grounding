@@ -1,0 +1,32 @@
+{
+  "dataset_sizes": {
+    "train": 9623,
+    "dev": 1070,
+    "test": 1222
+  },
+  "training": {
+    "candidate_c_values": [
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "selected_C": 0.1,
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 1000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "retrieval_dev": {
+    "hit@1": 0.6420560747663552,
+    "hit@3": 0.883177570093458,
+    "mrr": 0.7708278508721149
+  },
+  "retrieval_test": {
+    "hit@1": 0.6006546644844517,
+    "hit@3": 0.8420621931260229,
+    "mrr": 0.7305747106925722
+  }
+}

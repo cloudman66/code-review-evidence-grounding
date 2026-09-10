@@ -1,0 +1,630 @@
+{
+  "mode": "repo",
+  "targets": [
+    "pandas-dev/pandas",
+    "ansible/ansible",
+    "deepset-ai/haystack",
+    "scipy/scipy",
+    "skypilot-org/skypilot",
+    "scikit-learn/scikit-learn"
+  ],
+  "completed_targets": [
+    "pandas-dev/pandas",
+    "ansible/ansible",
+    "deepset-ai/haystack",
+    "scipy/scipy",
+    "skypilot-org/skypilot",
+    "scikit-learn/scikit-learn"
+  ],
+  "target_rows": [
+    {
+      "target": "pandas-dev/pandas",
+      "mode": "repo",
+      "train_samples": 8855,
+      "dev_samples": 978,
+      "test_samples": 115,
+      "excluded_train_samples": 768,
+      "excluded_dev_samples": 92,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.4782608695652174,
+      "lexical_hit@3": 0.7739130434782608,
+      "lexical_mrr": 0.6340384206362131,
+      "holdout_hit@1": 0.5130434782608696,
+      "holdout_hit@3": 0.8173913043478261,
+      "holdout_mrr": 0.6692061554686229,
+      "anchor_hit@1": 0.5043478260869565,
+      "anchor_hit@3": 0.8347826086956521,
+      "anchor_mrr": 0.6694570260657219,
+      "dev_holdout_hit@1": 0.6370143149284253,
+      "dev_holdout_hit@3": 0.8834355828220859,
+      "dev_holdout_mrr": 0.7658662975186364,
+      "delta_vs_lexical_hit@1": 0.034782608695652195,
+      "delta_vs_lexical_hit@3": 0.0434782608695653,
+      "delta_vs_lexical_mrr": 0.03516773483240987
+    },
+    {
+      "target": "ansible/ansible",
+      "mode": "repo",
+      "train_samples": 9247,
+      "dev_samples": 1026,
+      "test_samples": 66,
+      "excluded_train_samples": 376,
+      "excluded_dev_samples": 44,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.6212121212121212,
+      "lexical_hit@3": 0.9242424242424242,
+      "lexical_mrr": 0.7741341991341992,
+      "holdout_hit@1": 0.7121212121212122,
+      "holdout_hit@3": 0.9090909090909091,
+      "holdout_mrr": 0.8250000000000001,
+      "anchor_hit@1": 0.7121212121212122,
+      "anchor_hit@3": 0.9242424242424242,
+      "anchor_mrr": 0.8247474747474748,
+      "dev_holdout_hit@1": 0.6384015594541911,
+      "dev_holdout_hit@3": 0.8801169590643275,
+      "dev_holdout_mrr": 0.7676995775210579,
+      "delta_vs_lexical_hit@1": 0.09090909090909094,
+      "delta_vs_lexical_hit@3": -0.015151515151515138,
+      "delta_vs_lexical_mrr": 0.050865800865800836
+    },
+    {
+      "target": "deepset-ai/haystack",
+      "mode": "repo",
+      "train_samples": 9404,
+      "dev_samples": 1040,
+      "test_samples": 61,
+      "excluded_train_samples": 219,
+      "excluded_dev_samples": 30,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.45901639344262296,
+      "lexical_hit@3": 0.6557377049180327,
+      "lexical_mrr": 0.5888694397824134,
+      "holdout_hit@1": 0.5081967213114754,
+      "holdout_hit@3": 0.6885245901639344,
+      "holdout_mrr": 0.6243746213746031,
+      "anchor_hit@1": 0.5409836065573771,
+      "anchor_hit@3": 0.7049180327868853,
+      "anchor_mrr": 0.64764869132494,
+      "dev_holdout_hit@1": 0.6413461538461539,
+      "dev_holdout_hit@3": 0.8807692307692307,
+      "dev_holdout_mrr": 0.7694414422426323,
+      "delta_vs_lexical_hit@1": 0.04918032786885246,
+      "delta_vs_lexical_hit@3": 0.032786885245901676,
+      "delta_vs_lexical_mrr": 0.03550518159218974
+    },
+    {
+      "target": "scipy/scipy",
+      "mode": "repo",
+      "train_samples": 9353,
+      "dev_samples": 1040,
+      "test_samples": 51,
+      "excluded_train_samples": 270,
+      "excluded_dev_samples": 30,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.6078431372549019,
+      "lexical_hit@3": 0.8431372549019608,
+      "lexical_mrr": 0.7361085692927125,
+      "holdout_hit@1": 0.7058823529411765,
+      "holdout_hit@3": 0.9019607843137255,
+      "holdout_mrr": 0.8045310716879345,
+      "anchor_hit@1": 0.7058823529411765,
+      "anchor_hit@3": 0.9019607843137255,
+      "anchor_mrr": 0.8032175036803667,
+      "dev_holdout_hit@1": 0.6403846153846153,
+      "dev_holdout_hit@3": 0.8798076923076923,
+      "dev_holdout_mrr": 0.7673968358377642,
+      "delta_vs_lexical_hit@1": 0.0980392156862746,
+      "delta_vs_lexical_hit@3": 0.05882352941176472,
+      "delta_vs_lexical_mrr": 0.06842250239522196
+    },
+    {
+      "target": "skypilot-org/skypilot",
+      "mode": "repo",
+      "train_samples": 9263,
+      "dev_samples": 1041,
+      "test_samples": 47,
+      "excluded_train_samples": 360,
+      "excluded_dev_samples": 29,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.48936170212765956,
+      "lexical_hit@3": 0.8297872340425532,
+      "lexical_mrr": 0.670451159187079,
+      "holdout_hit@1": 0.5957446808510638,
+      "holdout_hit@3": 0.851063829787234,
+      "holdout_mrr": 0.7327438518927881,
+      "anchor_hit@1": 0.5531914893617021,
+      "anchor_hit@3": 0.8085106382978723,
+      "anchor_mrr": 0.700233808744447,
+      "dev_holdout_hit@1": 0.6445725264169068,
+      "dev_holdout_hit@3": 0.8818443804034583,
+      "dev_holdout_mrr": 0.7713997854679392,
+      "delta_vs_lexical_hit@1": 0.10638297872340424,
+      "delta_vs_lexical_hit@3": 0.021276595744680882,
+      "delta_vs_lexical_mrr": 0.06229269270570914
+    },
+    {
+      "target": "scikit-learn/scikit-learn",
+      "mode": "repo",
+      "train_samples": 9005,
+      "dev_samples": 1012,
+      "test_samples": 46,
+      "excluded_train_samples": 618,
+      "excluded_dev_samples": 58,
+      "selected_C": 0.1,
+      "lexical_hit@1": 0.6521739130434783,
+      "lexical_hit@3": 0.8913043478260869,
+      "lexical_mrr": 0.778425559947299,
+      "holdout_hit@1": 0.6304347826086957,
+      "holdout_hit@3": 0.9130434782608695,
+      "holdout_mrr": 0.7788043478260869,
+      "anchor_hit@1": 0.6304347826086957,
+      "anchor_hit@3": 0.9130434782608695,
+      "anchor_mrr": 0.7816425120772947,
+      "dev_holdout_hit@1": 0.6492094861660079,
+      "dev_holdout_hit@3": 0.8843873517786561,
+      "dev_holdout_mrr": 0.7738967215086021,
+      "delta_vs_lexical_hit@1": -0.021739130434782594,
+      "delta_vs_lexical_hit@3": 0.021739130434782594,
+      "delta_vs_lexical_mrr": 0.00037878787878786735
+    }
+  ],
+  "macro": {
+    "lexical_hit@1": 0.5513113561076669,
+    "lexical_hit@3": 0.8196870015682198,
+    "lexical_mrr": 0.6970045579966527,
+    "holdout_hit@1": 0.6109038713490822,
+    "holdout_hit@3": 0.846845815994083,
+    "holdout_mrr": 0.7391100080416727,
+    "anchor_hit@1": 0.60782687827952,
+    "anchor_hit@3": 0.8479096610995714,
+    "anchor_mrr": 0.7378245027733742
+  },
+  "weighted": {
+    "lexical_hit@1": 0.538860103626943,
+    "lexical_hit@3": 0.810880829015544,
+    "lexical_mrr": 0.6859809031503774,
+    "holdout_hit@1": 0.5958549222797928,
+    "holdout_hit@3": 0.8393782383419689,
+    "holdout_mrr": 0.7274368017559277,
+    "anchor_hit@1": 0.5932642487046632,
+    "anchor_hit@3": 0.844559585492228,
+    "anchor_mrr": 0.7273525874506632
+  },
+  "target_counts": {
+    "tobymao/sqlglot": {
+      "train": 90,
+      "dev": 12,
+      "test": 7
+    },
+    "xorbitsai/inference": {
+      "train": 19,
+      "dev": 2,
+      "test": 15
+    },
+    "sympy/sympy": {
+      "train": 408,
+      "dev": 44,
+      "test": 20
+    },
+    "zulip/zulip": {
+      "train": 3,
+      "dev": 1,
+      "test": 1
+    },
+    "Textualize/textual": {
+      "train": 116,
+      "dev": 14,
+      "test": 3
+    },
+    "Avaiga/taipy": {
+      "train": 39,
+      "dev": 11,
+      "test": 13
+    },
+    "Lightning-AI/pytorch-lightning": {
+      "train": 207,
+      "dev": 19,
+      "test": 15
+    },
+    "PrefectHQ/prefect": {
+      "train": 65,
+      "dev": 6,
+      "test": 14
+    },
+    "RasaHQ/rasa": {
+      "train": 308,
+      "dev": 27,
+      "test": 12
+    },
+    "ManimCommunity/manim": {
+      "train": 61,
+      "dev": 11,
+      "test": 9
+    },
+    "OpenMined/PySyft": {
+      "train": 53,
+      "dev": 0,
+      "test": 6
+    },
+    "PostHog/posthog": {
+      "train": 74,
+      "dev": 8,
+      "test": 14
+    },
+    "ansible/ansible": {
+      "train": 376,
+      "dev": 44,
+      "test": 66
+    },
+    "apache/airflow": {
+      "train": 77,
+      "dev": 8,
+      "test": 23
+    },
+    "ccxt/ccxt": {
+      "train": 32,
+      "dev": 1,
+      "test": 3
+    },
+    "dmlc/dgl": {
+      "train": 76,
+      "dev": 1,
+      "test": 17
+    },
+    "deepset-ai/haystack": {
+      "train": 219,
+      "dev": 30,
+      "test": 61
+    },
+    "dask/dask": {
+      "train": 113,
+      "dev": 10,
+      "test": 15
+    },
+    "cupy/cupy": {
+      "train": 62,
+      "dev": 19,
+      "test": 10
+    },
+    "certbot/certbot": {
+      "train": 31,
+      "dev": 4,
+      "test": 14
+    },
+    "dbt-labs/dbt-core": {
+      "train": 118,
+      "dev": 17,
+      "test": 20
+    },
+    "cvat-ai/cvat": {
+      "train": 20,
+      "dev": 1,
+      "test": 6
+    },
+    "home-assistant/core": {
+      "train": 82,
+      "dev": 10,
+      "test": 7
+    },
+    "goauthentik/authentik": {
+      "train": 18,
+      "dev": 2,
+      "test": 12
+    },
+    "huggingface/datasets": {
+      "train": 50,
+      "dev": 8,
+      "test": 21
+    },
+    "gradio-app/gradio": {
+      "train": 116,
+      "dev": 17,
+      "test": 21
+    },
+    "iterative/dvc": {
+      "train": 66,
+      "dev": 4,
+      "test": 10
+    },
+    "hpcaitech/ColossalAI": {
+      "train": 9,
+      "dev": 0,
+      "test": 9
+    },
+    "huggingface/accelerate": {
+      "train": 27,
+      "dev": 0,
+      "test": 19
+    },
+    "getsentry/sentry": {
+      "train": 171,
+      "dev": 17,
+      "test": 26
+    },
+    "freqtrade/freqtrade": {
+      "train": 39,
+      "dev": 13,
+      "test": 12
+    },
+    "getmoto/moto": {
+      "train": 39,
+      "dev": 6,
+      "test": 7
+    },
+    "hummingbot/hummingbot": {
+      "train": 21,
+      "dev": 6,
+      "test": 7
+    },
+    "huggingface/diffusers": {
+      "train": 26,
+      "dev": 7,
+      "test": 13
+    },
+    "frappe/frappe": {
+      "train": 30,
+      "dev": 0,
+      "test": 5
+    },
+    "intel/ipex-llm": {
+      "train": 34,
+      "dev": 2,
+      "test": 4
+    },
+    "geldata/gel": {
+      "train": 60,
+      "dev": 7,
+      "test": 7
+    },
+    "localstack/localstack": {
+      "train": 30,
+      "dev": 3,
+      "test": 5
+    },
+    "microsoft/autogen": {
+      "train": 88,
+      "dev": 6,
+      "test": 7
+    },
+    "modin-project/modin": {
+      "train": 245,
+      "dev": 27,
+      "test": 15
+    },
+    "marimo-team/marimo": {
+      "train": 46,
+      "dev": 6,
+      "test": 6
+    },
+    "matplotlib/matplotlib": {
+      "train": 94,
+      "dev": 9,
+      "test": 15
+    },
+    "mlflow/mlflow": {
+      "train": 69,
+      "dev": 4,
+      "test": 13
+    },
+    "jina-ai/serve": {
+      "train": 85,
+      "dev": 29,
+      "test": 12
+    },
+    "pydantic/pydantic": {
+      "train": 124,
+      "dev": 13,
+      "test": 11
+    },
+    "python/mypy": {
+      "train": 165,
+      "dev": 29,
+      "test": 23
+    },
+    "python/cpython": {
+      "train": 140,
+      "dev": 15,
+      "test": 6
+    },
+    "pandas-dev/pandas": {
+      "train": 768,
+      "dev": 92,
+      "test": 115
+    },
+    "numba/numba": {
+      "train": 69,
+      "dev": 3,
+      "test": 9
+    },
+    "pytorch/vision": {
+      "train": 40,
+      "dev": 0,
+      "test": 17
+    },
+    "pyg-team/pytorch_geometric": {
+      "train": 10,
+      "dev": 0,
+      "test": 5
+    },
+    "optuna/optuna": {
+      "train": 50,
+      "dev": 8,
+      "test": 6
+    },
+    "netbox-community/netbox": {
+      "train": 154,
+      "dev": 26,
+      "test": 47
+    },
+    "numpy/numpy": {
+      "train": 114,
+      "dev": 17,
+      "test": 9
+    },
+    "python-telegram-bot/python-telegram-bot": {
+      "train": 84,
+      "dev": 18,
+      "test": 11
+    },
+    "networkx/networkx": {
+      "train": 32,
+      "dev": 0,
+      "test": 7
+    },
+    "psf/black": {
+      "train": 13,
+      "dev": 3,
+      "test": 9
+    },
+    "reflex-dev/reflex": {
+      "train": 37,
+      "dev": 4,
+      "test": 5
+    },
+    "scikit-learn/scikit-learn": {
+      "train": 618,
+      "dev": 58,
+      "test": 46
+    },
+    "saltstack/salt": {
+      "train": 87,
+      "dev": 8,
+      "test": 16
+    },
+    "sqlfluff/sqlfluff": {
+      "train": 123,
+      "dev": 11,
+      "test": 24
+    },
+    "spyder-ide/spyder": {
+      "train": 145,
+      "dev": 31,
+      "test": 29
+    },
+    "ray-project/ray": {
+      "train": 35,
+      "dev": 3,
+      "test": 6
+    },
+    "qutebrowser/qutebrowser": {
+      "train": 77,
+      "dev": 4,
+      "test": 17
+    },
+    "scipy/scipy": {
+      "train": 270,
+      "dev": 30,
+      "test": 51
+    },
+    "run-llama/llama_index": {
+      "train": 49,
+      "dev": 10,
+      "test": 4
+    },
+    "saleor/saleor": {
+      "train": 105,
+      "dev": 29,
+      "test": 16
+    },
+    "keephq/keep": {
+      "train": 68,
+      "dev": 6,
+      "test": 23
+    },
+    "conan-io/conan": {
+      "train": 166,
+      "dev": 20,
+      "test": 16
+    },
+    "skypilot-org/skypilot": {
+      "train": 360,
+      "dev": 29,
+      "test": 47
+    },
+    "voxel51/fiftyone": {
+      "train": 12,
+      "dev": 0,
+      "test": 2
+    },
+    "vega/altair": {
+      "train": 3,
+      "dev": 0,
+      "test": 3
+    },
+    "Chia-Network/chia-blockchain": {
+      "train": 25,
+      "dev": 0,
+      "test": 4
+    },
+    "aio-libs/aiohttp": {
+      "train": 27,
+      "dev": 1,
+      "test": 1
+    },
+    "bridgecrewio/checkov": {
+      "train": 33,
+      "dev": 5,
+      "test": 1
+    },
+    "encode/starlette": {
+      "train": 7,
+      "dev": 0,
+      "test": 2
+    },
+    "cookiecutter/cookiecutter-django": {
+      "train": 21,
+      "dev": 0,
+      "test": 2
+    },
+    "encode/httpx": {
+      "train": 19,
+      "dev": 1,
+      "test": 1
+    },
+    "letta-ai/letta": {
+      "train": 1,
+      "dev": 0,
+      "test": 2
+    },
+    "pwndbg/pwndbg": {
+      "train": 17,
+      "dev": 1,
+      "test": 2
+    },
+    "onnx/onnx": {
+      "train": 23,
+      "dev": 1,
+      "test": 1
+    },
+    "pypa/pip": {
+      "train": 26,
+      "dev": 1,
+      "test": 1
+    },
+    "py-pdf/pypdf": {
+      "train": 20,
+      "dev": 0,
+      "test": 1
+    },
+    "piskvorky/gensim": {
+      "train": 23,
+      "dev": 1,
+      "test": 2
+    },
+    "python-poetry/poetry": {
+      "train": 1,
+      "dev": 1,
+      "test": 1
+    },
+    "scrapy/scrapy": {
+      "train": 25,
+      "dev": 6,
+      "test": 1
+    },
+    "All-Hands-AI/OpenHands": {
+      "train": 35,
+      "dev": 4,
+      "test": 3
+    }
+  }
+}

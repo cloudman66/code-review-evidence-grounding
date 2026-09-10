@@ -1,0 +1,4 @@
+system,display_name,hit1,runtime_seconds,milliseconds_per_sample,artifact_size_mb
+lexical_baseline,lexical_baseline,0.546644844517185,50.071644750001724,40.975159369886846,0.0
+canonical_single_model,canonical_single_model,0.6006546644844517,1.685161582994624,1.3790192986862717,0.022100448608398438
+fine_tuned_biencoder_cpu,fine_tuned_biencoder_cpu,0.43453355155482815,96.56081262498628,79.01866826921955,87.59644508361816

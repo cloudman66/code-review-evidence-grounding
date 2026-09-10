@@ -1,0 +1,21 @@
+dataset:
+  train_path: data/processed/cr_intent/train.jsonl
+  dev_path: data/processed/cr_intent/dev.jsonl
+  test_path: data/processed/cr_intent/test.jsonl
+
+retrieval:
+  top_k: 2
+  seed: 42
+  evaluate: false
+
+classification:
+  modes:
+    - none
+    - full
+    - random
+    - retrieved
+  max_features: 0
+  random_state: 42
+
+output:
+  dir: results/cr_intent_baseline

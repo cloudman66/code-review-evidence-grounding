@@ -1,0 +1,79 @@
+{
+  "domain": "Documentation Updates",
+  "slice_size": 33,
+  "variants": [
+    {
+      "name": "lexical",
+      "label": "Lexical baseline",
+      "kind": "active",
+      "samples": 33,
+      "complete_ranking": true,
+      "metrics": {
+        "hit@1": 0.5454545454545454,
+        "hit@3": 0.7272727272727273,
+        "mrr": 0.6561034576042634,
+        "mrr_at_3": 0.6363636363636364
+      },
+      "note": "Deterministic v2 lexical ranking rebuilt from the v2 candidate pools."
+    },
+    {
+      "name": "canonical_single",
+      "label": "Canonical single learned ranker",
+      "kind": "active",
+      "samples": 33,
+      "complete_ranking": true,
+      "metrics": {
+        "hit@1": 0.45454545454545453,
+        "hit@3": 0.7878787878787878,
+        "mrr": 0.6382976952551573,
+        "mrr_at_3": 0.6212121212121212
+      },
+      "note": "v2 fuzzy len-2 plus pseudo-relevance feedback ranker."
+    },
+    {
+      "name": "intent",
+      "label": "Intent-aware learned ranker",
+      "kind": "active",
+      "samples": 33,
+      "complete_ranking": true,
+      "metrics": {
+        "hit@1": 0.45454545454545453,
+        "hit@3": 0.7575757575757576,
+        "mrr": 0.6208798827410761,
+        "mrr_at_3": 0.5959595959595959
+      },
+      "note": "v2 intent-expanded specialist; reported independently from the canonical single ranker."
+    },
+    {
+      "name": "intent_feedback",
+      "label": "Intent + feedback learned ranker",
+      "kind": "exploratory",
+      "samples": 33,
+      "complete_ranking": true,
+      "metrics": {
+        "hit@1": 0.48484848484848486,
+        "hit@3": 0.7272727272727273,
+        "mrr": 0.6408781305840129,
+        "mrr_at_3": 0.6060606060606061
+      },
+      "note": "Available v2 ablation; not renamed as the final overall system."
+    },
+    {
+      "name": "canonical_overall",
+      "label": "Canonical overall system",
+      "kind": "missing",
+      "samples": 33,
+      "complete_ranking": false,
+      "metrics": {
+        "hit@1": null,
+        "hit@3": null,
+        "mrr": null,
+        "mrr_at_3": null
+      },
+      "note": "No final v2 canonical-overall prediction artifact was identified; not inferred from a router."
+    }
+  ],
+  "best_hit@1_variant": "lexical",
+  "best_hit@1": 0.5454545454545454,
+  "mrr_definition": "full-ranking MRR when complete_ranking=true; otherwise null (mrr_at_3 is diagnostic only)"
+}

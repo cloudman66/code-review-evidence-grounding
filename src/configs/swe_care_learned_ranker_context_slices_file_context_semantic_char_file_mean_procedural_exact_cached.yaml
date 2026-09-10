@@ -1,0 +1,37 @@
+dataset:
+  train_path: data/processed/swe_care_grounding/train.jsonl
+  dev_path: data/processed/swe_care_grounding/dev.jsonl
+  test_path: data/processed/swe_care_grounding/test.jsonl
+
+retrieval:
+  top_k: 3
+
+feature_row_cache:
+  train_path: results/feature_cache/swe_care_train.jsonl.gz
+  dev_path: results/feature_cache/swe_care_dev.jsonl.gz
+  test_path: results/feature_cache/swe_care_test.jsonl.gz
+
+external_features:
+  - name: semantic_char_score
+    train_score_cache_path: results/cache/swe_care_context_slices_semantic_char_train_exact.json.gz
+    dev_score_cache_path: results/cache/swe_care_context_slices_semantic_char_dev_exact.json.gz
+    test_score_cache_path: results/cache/swe_care_context_slices_semantic_char_test_exact.json.gz
+  - name: semantic_file_score
+    train_score_cache_path: results/cache/swe_care_context_slices_semantic_file_mean_train_exact.json.gz
+    dev_score_cache_path: results/cache/swe_care_context_slices_semantic_file_mean_dev_exact.json.gz
+    test_score_cache_path: results/cache/swe_care_context_slices_semantic_file_mean_test_exact.json.gz
+  - name: semantic_procedural_score
+    train_score_cache_path: results/cache/swe_care_context_slices_semantic_procedural_train_exact.json.gz
+    dev_score_cache_path: results/cache/swe_care_context_slices_semantic_procedural_dev_exact.json.gz
+    test_score_cache_path: results/cache/swe_care_context_slices_semantic_procedural_test_exact.json.gz
+
+training:
+  feature_transform: raw_plus_relative_plus_context_slices_plus_file_context
+  candidate_c_values: [0.1, 0.25, 0.5, 1.0, 2.0]
+  max_iter: 1000
+  solver: liblinear
+  class_weight: balanced
+  random_state: 42
+
+output:
+  dir: results/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_procedural_exact_cached

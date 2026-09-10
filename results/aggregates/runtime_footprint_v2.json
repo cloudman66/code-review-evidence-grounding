@@ -1,0 +1,127 @@
+{
+  "schema_version": "runtime_footprint_v2_audit_1",
+  "measured_at_local": "2026-09-02T10:46:25+0800",
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.13",
+    "cpu_count": 10,
+    "model_device": {
+      "lexical": "cpu",
+      "canonical": "cpu",
+      "fine_tuned_biencoder": "cpu"
+    },
+    "torch": {
+      "version": "2.6.0",
+      "mps_built": true,
+      "mps_available": true
+    },
+    "hardware_model": "MacBookPro18,3",
+    "memory_bytes": "34359738368"
+  },
+  "dataset": {
+    "samples": 1222,
+    "total_contexts": 32068,
+    "avg_contexts_per_sample": 26.242225859247135,
+    "sample_id_sha256": "0ae795776b5b7479098dbb46b2507db4527e5409d4fcb4ef389b4b4abc0f91f0"
+  },
+  "timing_protocol": {
+    "top_k_reported": 3,
+    "metrics_use_full_candidate_ranking": true,
+    "model_load_included": false,
+    "lexical_cache_load_included": false,
+    "canonical_cache_load_and_feature_construction_included": true,
+    "biencoder_query_and_context_encoding_included": true,
+    "biencoder_model_load_included": false,
+    "os_page_cache_state": "not reset; one sequential process, as in historical measurement",
+    "repetitions": 1
+  },
+  "artifacts": {
+    "dataset": {
+      "path": "data/processed/swe_care_grounding_v2/test.jsonl",
+      "sha256": "70395333892b3a2e9875116f87c07c55d5b4f124611a56d3fb6dbd2e9ab9c222",
+      "size_mb": 35.833587646484375
+    },
+    "feature_cache": {
+      "path": "data/cache_v2/feature_rows/swe_care_test.jsonl.gz",
+      "sha256": "60932566dac8de8a0d0505aed4badaba9e6d78e6c59a01ab79ff23c3b2ff4249",
+      "size_mb": 6.539560317993164
+    },
+    "score_caches": {
+      "semantic_char_file_score": {
+        "path": "data/cache_v2/scores/swe_care_context_slices_semantic_char_file_mean_test_exact.json.gz",
+        "sha256": "6d5ba9928ddf6af9110596ed0546f40737c29174b43c4b5b899ff7344456bed9",
+        "size_mb": 0.35967445373535156
+      },
+      "fuzzy_comment_score": {
+        "path": "data/cache_v2/scores/swe_care_fuzzy_comment_len2_test_exact.json.gz",
+        "sha256": "e8587e9bb6ca7748208c8f9935eda06e339f232a079c286cda78edbb9c986e66",
+        "size_mb": 0.2933082580566406
+      },
+      "semantic_feedback_score": {
+        "path": "data/cache_v2/scores/swe_care_semantic_feedback_top1_test_exact.json.gz",
+        "sha256": "5bab54cba8ef6a44442fc9bda719c6c9d34ec6e580a8d7624c9f11b1eab89749",
+        "size_mb": 0.3521108627319336
+      }
+    },
+    "canonical_model": {
+      "path": "results_v2/ablations/swe_care_learned_ranker_context_slices_file_context_semantic_char_file_mean_fuzzy_len2_feedback_exact_cached/model.json",
+      "sha256": "5381c425a2303a36e839cf8f33f173380a22c417933b138b2411bde032a5d82b",
+      "size_mb": 0.022100448608398438
+    },
+    "finetuned_biencoder_model": {
+      "path": "results_v2/baselines/swe_care_biencoder_finetuned_minilm/model_best",
+      "sha256": "a63b004fb353d9689e3076954450a1acc06caef3e6fa584bccaf2cd65f7400fe",
+      "size_mb": 87.59644508361816
+    }
+  },
+  "process_memory": {
+    "max_rss_before_systems_mb": 244.328125,
+    "max_rss_after_systems_mb": 1666.421875,
+    "note": "ru_maxrss is process-wide peak RSS, not a per-system allocation measurement."
+  },
+  "systems": {
+    "lexical_baseline": {
+      "hit@1": 0.546644844517185,
+      "hit@3": 0.795417348608838,
+      "mrr": 0.6873449840701338,
+      "elapsed_seconds": 50.071644750001724,
+      "seconds_per_sample": 0.04097515936988685,
+      "artifact_size_mb": 0.0,
+      "ranking_depth": "full_candidate_set"
+    },
+    "canonical_single_model": {
+      "hit@1": 0.6006546644844517,
+      "hit@3": 0.8420621931260229,
+      "mrr": 0.7305747106925722,
+      "elapsed_seconds": 1.685161582994624,
+      "seconds_per_sample": 0.0013790192986862717,
+      "artifact_size_mb": 0.022100448608398438,
+      "ranking_depth": "full_candidate_set",
+      "model_load_seconds_excluded": 0.003906875004759058,
+      "timed_stages": [
+        "feature_cache_load",
+        "external_score_cache_load_and_attach",
+        "feature_matrix_construction",
+        "full_candidate_ranking"
+      ]
+    },
+    "fine_tuned_biencoder_cpu": {
+      "hit@1": 0.43453355155482815,
+      "hit@3": 0.693126022913257,
+      "mrr": 0.5918103971734474,
+      "elapsed_seconds": 96.56081262498628,
+      "seconds_per_sample": 0.07901866826921955,
+      "artifact_size_mb": 87.59644508361816,
+      "ranking_depth": "full_candidate_set",
+      "model_load_seconds_excluded": 0.09090737499354873,
+      "query_encoding_seconds": 5.982123874986428,
+      "context_encoding_seconds": 88.6642031250085,
+      "scoring_seconds": 1.9144856249913573,
+      "unique_queries": 1190,
+      "unique_contexts": 12384,
+      "device": "cpu"
+    }
+  }
+}
